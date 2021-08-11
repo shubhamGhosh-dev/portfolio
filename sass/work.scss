@@ -1,0 +1,142 @@
+.work {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   &__heading,
+   &__heading2 {
+      font-size: 2.5rem;
+      display: block;
+      text-transform: uppercase;
+      transition: all 0.2s;
+
+      &:hover {
+         transform: skew(-6deg, -5deg);
+      }
+   }
+   &__heading {
+      margin-top: 7rem;
+   }
+}
+
+.glider-contain {
+   width: calc(100% - 4rem);
+   margin-bottom: 100px;
+}
+
+.card {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   height: 35rem;
+   width: 100%;
+   min-width: 200px;
+   background-color: #eeeeee;
+   margin: 5rem 0rem;
+   overflow: hidden;
+   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+   border-radius: 10px;
+
+   &__img-box {
+      width: 100%;
+      height: 40%;
+   }
+   &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+
+   &__heading {
+      padding: 2rem 2rem 0 2rem;
+      font-size: 1.5rem;
+   }
+   &__description {
+      margin-top: -1rem;
+      font-size: 1.2rem;
+      padding: 2rem 2rem 0 2rem;
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   &__description span {
+      padding: 0.2rem 1rem;
+      border-radius: 17px;
+      color: white;
+      margin-right: 4px;
+      margin-bottom: 4px;
+      background-color: #0083b5b8;
+   }
+
+   &__goto {
+      position: absolute;
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 2.5rem;
+
+      &-logo {
+         position: absolute;
+         height: 10rem;
+         left: 50%;
+         transform: translateX(-50%);
+         opacity: 0.05;
+         text-align: center;
+      }
+      &-btn {
+         z-index: 10;
+
+         align-self: center;
+         margin: 0 auto;
+         min-width: 8.5rem;
+         padding: 0.7rem 2rem;
+         text-align: center;
+         font-size: 1.4rem;
+         font-weight: 400;
+         text-decoration: none;
+         background-color: #00b9a5;
+         //background-image: linear-gradient(to right bottom, #ce9dfa, #925cfd);
+         color: white;
+         border-radius: 6px;
+      }
+   }
+}
+
+.disabled {
+   pointer-events: none;
+   color: #ccc;
+}
+
+.glide__slide {
+   transition: all 0.2s;
+}
+
+.glide__slide:hover {
+   transform: scale(1.1);
+}
+
+.glide__arrows .glide__arrow {
+   height: 5rem;
+   width: 5rem;
+   padding: 0;
+   background-color: #00b9a5;
+   border: none;
+   border-radius: 50px;
+   transition: all 0.2s;
+}
+
+.glide__arrows .glide__arrow:hover {
+   color: #ffdb56;
+}
+
+.glide__bullets .glide__bullet {
+   background-color: rgb(201, 191, 255);
+}
+
+.glide__bullets .glide__bullet--active {
+   background-color: #00b9a5;
+}

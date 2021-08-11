@@ -1,0 +1,91 @@
+.skill{
+    position: relative;
+    height: 60rem;
+    display: flex;
+    align-items: baseline;
+    z-index: 10;
+
+    &__web, &__graphic{
+        width: 50%;
+        height: 100%;
+        padding: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__devider{
+        width: 3px;
+        height: 65%;
+        background-color: rgba(196, 196, 196, 0.548);
+        align-self: center;
+        border-radius: 50%;
+    }
+}
+
+.tools{
+    font-size: 1.7rem;
+    text-align: center;
+    & span{
+        position: relative;
+        color: white;
+        padding: .7rem 1.2rem;
+        background-color: #001324;
+        border-radius: 30px;
+        margin-bottom: 1rem;
+        display: inline-block;
+        overflow: hidden;
+        transition: all .3s;
+      
+    }
+  
+    & span:hover{
+        background-color: rgb(224, 127, 0);
+    }
+}
+
+.heading-medium{
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.skill-background{
+    position: relative;
+    background-color: #00b9a5;
+    // background-image: linear-gradient(to right bottom,#ce9dfa,#925cfd);
+    overflow: hidden;
+
+    &::before{
+        content: "";
+        position: absolute;
+        left: -20rem;
+        top: -20rem;
+        height: 50rem;
+        width: 50rem;
+        border-radius: 50%;
+        background-image: linear-gradient(to left bottom, #3dbeaf, #14e6b6);
+        z-index: 1;
+        // background-image: linear-gradient(to left bottom,#ce9dfa,#925cfd);
+        // background-image: url("../img/code.png"), linear-gradient(to left bottom,#ce9dfa,#925cfd);
+        // background-position: center;background-size: auto;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        right: -20rem;
+        bottom: -20rem;
+        height: 50rem;
+        width: 50rem;
+        border-radius: 50%;
+        background-image: linear-gradient(to left bottom, #04bfab, #14e6b6);
+        z-index: 1;
+        // background-image: linear-gradient(to left bottom,#ce9dfa,#925cfd);
+        // background-image: url("../img/design.png"), linear-gradient(to left bottom,#ce9dfa,#925cfd);
+        // background-position: center;
+        // background-size: auto;
+    }
+}
+

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::after,
+::before{
+    box-sizing: inherit;
+}
+
+html{
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 62.5%;  // 10px/16px = 62.5%
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.align-container{
+    margin: 0px auto;
+    min-width: 0px;
+    max-width: 1252px;
+    padding-left: 12px;
+    padding-right: 12px;
+}

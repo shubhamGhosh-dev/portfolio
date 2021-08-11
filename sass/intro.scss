@@ -1,0 +1,28 @@
+.intro {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   
+
+   &__img {
+      height: 55rem;
+      width: auto;
+   }
+}
+
+.description {
+   width: 50%;
+   padding: 2rem;
+   color: #001324;
+   
+   &__wlcm {
+      font-size: 5rem;
+      line-height: 1;
+   }
+
+   &__main {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-top: 2rem;
+   }
+}

@@ -1,0 +1,39 @@
+.header{
+
+    min-height: 100vh;
+    position: relative;
+    
+    background-color: #00b9a5;
+    //background-image: linear-gradient(to right bottom,#8d2de279,#4A00E0);
+}
+
+
+
+///////////////////////////
+.custom-shape-divider-bottom-1600836202 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1600836202 svg {
+    position: relative;
+    display: block;
+    width: calc(151% + 1.3px);
+    height: 212px;
+}
+
+.custom-shape-divider-bottom-1600836202 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1600836202 svg {
+        width: calc(110% + 1.3px);
+        height: 212px;
+    }
+}

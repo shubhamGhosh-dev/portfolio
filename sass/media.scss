@@ -1,0 +1,151 @@
+@media (max-width: 1300px) {
+   .skill__web,
+   .skill__graphic {
+      padding: 1rem;
+   }
+}
+
+@media (max-width: 1110px) {
+   .info {
+      padding: 10rem 0rem;
+   }
+}
+
+@media (max-width: 900px) {
+   html {
+      font-size: 50%;
+   }
+}
+
+@media (max-width: 750px) {
+   .contact {
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+   }
+   .info,
+   .social {
+      width: auto;
+   }
+   .info {
+      padding: 5rem 0rem 5rem 0rem;
+      flex-direction: row;
+      justify-content: space-between;
+      &__phone,
+      &__email {
+         margin-left: 6rem;
+      }
+   }
+   .social {
+      padding: 0rem 0rem 5rem 0rem;
+   }
+
+   .header__list {
+      width: 100%;
+      border-radius: 0;
+   }
+
+   .intro__img {
+      height: 46rem;
+      margin-right: 1rem;
+   }
+}
+
+@media (max-width: 680px) {
+   .skill {
+      flex-direction: column;
+      align-items: center;
+
+      &__devider {
+         display: none;
+      }
+
+      &__web,
+      &__graphic {
+         width: 80%;
+      }
+   }
+}
+
+@media (max-width: 590px) {
+   .intro__img {
+      display: none;
+   }
+
+   .description {
+      width: auto;
+      text-align: center;
+   }
+
+   .header__list {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      height: 0;
+      font-size: 1.5rem;
+      transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+   }
+
+   .header__list--active {
+      height: 30rem;
+   }
+
+   .header__item {
+      font-size: 1.5rem;
+      width: 100%;
+      text-align: center;
+      display: block;
+   }
+
+   .header__link{
+      display: block;
+      width: 100%;
+      padding: 1rem 3rem;
+   }
+
+   .header__nav-btn {
+      display: inline-block;
+      padding: 1rem;
+      background-color: #ffdb56;
+      width: 8rem;
+      height: 5rem;
+      text-align: center;
+      z-index: 1000;
+      position: fixed;
+      visibility: visible;
+      top: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+   }
+
+   .header__nav-btn--active {
+      transform: translateX(-50%) rotate(180deg);
+      transform-origin: center center;
+      position: fixed;
+      top: 29rem;
+   }
+
+   .header__dummy-space--active{
+      height: 10rem;
+      z-index: -1;
+      transition: all .6s cubic-bezier(0.65, 0, 0.35, 1);
+   }
+}
+
+@media (max-width: 520px) {
+   .glide__arrows {
+      display: none;
+   }
+}
+
+@media (max-width: 420px) {
+   .card {
+      width: 80%;
+      margin: 5rem auto;
+   }
+
+   .glide__slide:hover {
+      transform: none;
+   }
+}
