@@ -19,6 +19,7 @@
 
 @media (max-width: 750px) {
    .contact {
+      margin-top: 5rem;
       flex-direction: column;
       align-items: center;
       padding: 0;
@@ -137,6 +138,11 @@
    .glide__arrows {
       display: none;
    }
+
+   .message-me__submit{
+      bottom: -6.5rem;
+      right: 0rem;
+   }
 }
 
 @media (max-width: 420px) {
@@ -147,5 +153,11 @@
 
    .glide__slide:hover {
       transform: none;
+   }
+}
+
+@media (max-width: 420px){
+   .message-me__alart{
+      bottom: -3.5rem;
    }
 }

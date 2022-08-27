@@ -25,6 +25,12 @@ body {
   padding-left: 12px;
   padding-right: 12px; }
 
+.active {
+  visibility: visible !important; }
+
+.disabled {
+  display: none !important; }
+
 .header {
   min-height: 100vh;
   position: relative;
@@ -327,6 +333,111 @@ body {
     background-image: linear-gradient(to left bottom, #04bfab, #14e6b6);
     z-index: 1; }
 
+.contact-heading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.contact-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 3.5rem;
+  color: #ffff;
+  transition: all 0.2s; }
+
+.contact-heading:hover {
+  transform: skew(-6deg, -5deg); }
+
+.message-me {
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -5rem;
+  position: relative; }
+  .message-me__form {
+    width: 55rem;
+    margin: auto 0; }
+  .message-me__email, .message-me__message {
+    position: relative; }
+  .message-me__email-label, .message-me__message-label {
+    position: absolute;
+    color: gray;
+    font-size: 1.3rem;
+    z-index: 10;
+    top: 0.9rem;
+    left: 1.5rem;
+    background-color: #001324;
+    pointer-events: none;
+    transition: all 0.2s; }
+  .message-me__email-input, .message-me__message-input {
+    width: 100%;
+    display: block;
+    padding: 1rem 1.2rem;
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    position: relative;
+    background-color: #001324;
+    border: 1px solid #00b9a5;
+    border-radius: 0.5rem;
+    color: #ffff; }
+    .message-me__email-input:focus, .message-me__message-input:focus {
+      outline: none; }
+  .message-me__message-input {
+    height: 10rem;
+    resize: none; }
+  .message-me__email-input:focus ~ .message-me__email-label,
+  .message-me__email-input:valid ~ .message-me__email-label,
+  .message-me__email-input:not(:placeholder-shown) ~ .message-me__email-label,
+  .message-me__message-input:focus ~ .message-me__message-label,
+  .message-me__message-input:valid ~ .message-me__message-label {
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    top: -0.9rem;
+    left: 1.7rem;
+    color: #00b9a5; }
+  .message-me__submit {
+    position: absolute;
+    margin: auto;
+    bottom: -1.5rem;
+    right: -2rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    z-index: 100;
+    cursor: pointer;
+    transition: all 0.2s; }
+  .message-me__submit:hover {
+    transform: scale(1.1); }
+  .message-me__submit:active {
+    background-color: #aaaaaa; }
+  .message-me__alart {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    padding: 0.3rem 1rem;
+    transform: translateX(-50%) scale(50%);
+    font-size: 1.6rem;
+    color: #001324;
+    text-align: center;
+    background-color: #ffdb56;
+    border: 1px solid white;
+    border-radius: 20px;
+    opacity: 0%;
+    transition: all 0.6s;
+    visibility: hidden; }
+  .message-me__alart.active {
+    opacity: 100%;
+    transform: translateX(-50%) scale(100%); }
+
+.disable-send-btn {
+  background-color: #ffff;
+  cursor: wait; }
+
+#loading-icon {
+  font-size: 1.7em;
+  animation: rotation 2s infinite linear;
+  z-index: 100; }
+
 .contact {
   padding: 0 20rem;
   display: flex;
@@ -346,7 +457,8 @@ body {
     color: white; }
   .info__phone h2, .info__email h2 {
     font-size: 2rem; }
-  .info__phone p, .info__email p {
+  .info__phone a, .info__email a {
+    text-decoration: none;
     font-size: 1.4rem;
     color: #a0a0a0; }
   .info__phone > i, .info__email > i {
@@ -369,6 +481,12 @@ body {
 .contact-background {
   background-color: #001324; }
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+
 @media (max-width: 1300px) {
   .skill__web,
   .skill__graphic {
@@ -384,6 +502,7 @@ body {
 
 @media (max-width: 750px) {
   .contact {
+    margin-top: 5rem;
     flex-direction: column;
     align-items: center;
     padding: 0; }
@@ -464,7 +583,10 @@ body {
 
 @media (max-width: 520px) {
   .glide__arrows {
-    display: none; } }
+    display: none; }
+  .message-me__submit {
+    bottom: -6.5rem;
+    right: 0rem; } }
 
 @media (max-width: 420px) {
   .card {
@@ -472,3 +594,7 @@ body {
     margin: 5rem auto; }
   .glide__slide:hover {
     transform: none; } }
+
+@media (max-width: 420px) {
+  .message-me__alart {
+    bottom: -3.5rem; } }

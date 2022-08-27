@@ -15,12 +15,18 @@
       />
       <!-- <link rel="stylesheet" href="css/style.comp.css" /> -->
       <link rel="stylesheet" href="css/style.css" />
-      <link
+      <link rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+            integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" 
+            crossorigin="anonymous" 
+            referrerpolicy="no-referrer" 
+      />
+      <!-- <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
          crossorigin="anonymous"
-      />
+      /> -->
 
       <!-- Required Core stylesheet -->
       <link
@@ -393,21 +399,44 @@
          </div>
       </section>
 
-      <!-- section contact -->
+      <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+      <!--/////////////////////////////////////// Contact Section /////////////////////////////////////////////////////////-->
+      <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
       <section class="contact-background">
          <div class="align-container">
+            <div class="contact-heading-container">
+               <h1 class="contact-heading">CONTACT ME</h1>
+            </div>
+            <div class="message-me">
+               <form id="message-form" class="message-me__form">
+                  <div class="message-me__email">
+                     <input id="email-input" type="email" class="message-me__email-input" placeholder=" " autocomplete="off" required>
+                     <label class="message-me__email-label" for="message-me__email-input">Your Email ID</label>
+                  </div>
+                  <div class="message-me__message">
+                     <textarea id="message-input" type="text" class="message-me__message-input" placeholder=" " required></textarea>
+                     <label class="message-me__message-label" for="message-me__message-input">Your Message...</label>
+                     <button id="message-submit-btn" type="submit" class="message-me__submit">
+                        <i id="send-icon" class="fa-solid fa-paper-plane fa-lg"></i>
+                        <i id="loading-icon" class="fa-solid fa-spinner fa-lg disabled"></i>
+                     </button>
+                  </div>
+                  <p id="message-alart" class="message-me__alart">Plese fill the form to send</p>
+               </form>
+            </div>
             <div class="contact" id="contact">
                <div class="info">
                   <div class="info__phone">
                      <i class="fas fa-3x fa-phone-square-alt"></i>
                      <h2>Phone</h2>
-                     <p type>+91 8637832792</p>
-                     <p>+91 9547042741</p>
+                     <a href="tel:+918637832792">+91 8637832792</a><br/>
+                     <a href="tel:+919547042741">+91 9547042741</a>
                   </div>
                   <div class="info__email">
                      <i class="fas fa-3x fa-envelope-open-text"></i>
                      <h2>Email</h2>
-                     <p>shubhamghosh17@gmail.com</p>
+                     <a href="mailto:shubhamghosh17@gmail.com">shubhamghosh17@gmail.com</a>
                   </div>
                </div>
                <div class="social">

@@ -29,3 +29,12 @@ body{
     padding-left: 12px;
     padding-right: 12px;
 }
+
+.active{
+    visibility: visible !important;
+}
+
+
+.disabled{
+    display: none !important;
+}

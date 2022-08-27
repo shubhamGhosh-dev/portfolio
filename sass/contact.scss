@@ -1,3 +1,139 @@
+.contact-heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-heading{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 3.5rem;
+    color: #ffff;
+    transition: all 0.2s;
+}
+
+.contact-heading:hover{
+    transform: skew(-6deg, -5deg);
+}
+
+.message-me{
+    height: 25rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -5rem;
+    position: relative;
+
+    &__form{
+        width: 55rem;
+        margin: auto 0;
+    }
+
+    &__email, &__message{
+        position: relative;
+    }
+
+    &__email-label, &__message-label{
+        position: absolute;
+        color: gray;
+        font-size: 1.3rem;
+        z-index: 10;
+        top: 0.9rem;
+        left: 1.5rem;
+        background-color: #001324;
+        pointer-events: none;
+        transition: all 0.2s;
+    }
+
+
+    &__email-input, &__message-input{
+        width: 100%;
+        display: block  ;
+        padding: 1rem 1.2rem;
+        margin: 2rem 0;
+        font-size: 1.6rem;
+        position: relative;
+        background-color: #001324;
+        border: 1px solid #00b9a5;
+        border-radius: 0.5rem;
+        color: #ffff;
+
+        &:focus{
+            outline: none;
+        }
+    }
+
+    &__message-input{
+        height: 10rem;
+        resize: none;
+    }
+
+    &__email-input:focus ~ &__email-label,
+    &__email-input:valid ~ &__email-label,
+    &__email-input:not(:placeholder-shown) ~ &__email-label,
+    &__message-input:focus ~ &__message-label,
+    &__message-input:valid ~ &__message-label{
+        font-size: 1.2rem;
+        padding: 0 0.5rem;
+        top: -0.9rem;
+        left: 1.7rem;
+        color: #00b9a5;
+    }
+
+    &__submit{
+        position: absolute;
+        margin: auto;
+        bottom: -1.5rem;
+        right: -2rem;
+        height: 5rem;
+        width: 5rem;
+        border-radius: 50%;
+        z-index: 100;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    &__submit:hover{
+        transform: scale(1.1);
+    }
+
+    &__submit:active{
+        background-color: #aaaaaa;
+    }
+
+    &__alart{
+        position: absolute;
+        bottom: -1rem;
+        left: 50%;
+        padding: 0.3rem 1rem;
+        transform: translateX(-50%) scale(50%);
+        font-size: 1.6rem;
+        color: #001324;
+        text-align: center;
+        background-color:#ffdb56;
+        border: 1px solid white;
+        border-radius: 20px;
+        opacity: 0%;
+        transition: all 0.6s;
+        visibility: hidden;
+    }
+
+    &__alart.active{
+        opacity: 100%;
+        transform: translateX(-50%) scale(100%);
+    }
+}
+
+.disable-send-btn{
+    background-color: #ffff;
+    cursor: wait;
+}
+
+#loading-icon{
+    font-size: 1.7em;
+    animation: rotation 2s infinite linear;
+    z-index: 100;
+}
+
 .contact{
     // min-height: 50vh;
     padding: 0 20rem;
@@ -45,7 +181,8 @@
         font-size: 2rem;
     }
 
-    &__phone p, &__email p{
+    &__phone a, &__email a{
+        text-decoration: none;
         font-size: 1.4rem;
         color: rgb(160, 160, 160);
     }
@@ -76,6 +213,15 @@
 
 .contact-background{
     background-color: #001324;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
 }
 
 
