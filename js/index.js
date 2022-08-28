@@ -67,7 +67,7 @@ messageForm.addEventListener("submit", async (e) => {
                messageInput.value = "";
             }
             enableBtn()
-            showAlert(res.msg);
+            showAlert(res.msg? res.msg : "Something went wrong.");
          })
    }else{
       if(emailInput.value && !validateEmailID(emailInput.value)){
