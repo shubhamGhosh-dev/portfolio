@@ -411,13 +411,17 @@
             </div>
             <div class="message-me">
                <form id="message-form" class="message-me__form">
+                  <div class="message-me__name">
+                     <input id="name_input" type="text" class="message-me__name-input" placeholder=" " autocomplete="off" required>
+                     <label class="message-me__name-label" for="name_input">Your Name</label>
+                  </div>
                   <div class="message-me__email">
                      <input id="email-input" type="email" class="message-me__email-input" placeholder=" " autocomplete="off" required>
-                     <label class="message-me__email-label" for="message-me__email-input">Your Email ID</label>
+                     <label class="message-me__email-label" for="email-input">Your Email ID</label>
                   </div>
                   <div class="message-me__message">
                      <textarea id="message-input" type="text" class="message-me__message-input" placeholder=" " required></textarea>
-                     <label class="message-me__message-label" for="message-me__message-input">Your Message...</label>
+                     <label class="message-me__message-label" for="message-input">Your Message...</label>
                      <button id="message-submit-btn" type="submit" class="message-me__submit">
                         <i id="send-icon" class="fa-solid fa-paper-plane fa-lg"></i>
                         <i id="loading-icon" class="fa-solid fa-spinner fa-lg disabled"></i>

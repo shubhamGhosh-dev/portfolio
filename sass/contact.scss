@@ -28,11 +28,11 @@
         margin: auto 0;
     }
 
-    &__email, &__message{
+    &__name, &__email, &__message{
         position: relative;
     }
 
-    &__email-label, &__message-label{
+    &__name-label, &__email-label, &__message-label{
         position: absolute;
         color: gray;
         font-size: 1.3rem;
@@ -45,7 +45,7 @@
     }
 
 
-    &__email-input, &__message-input{
+    &__name-input, &__email-input, &__message-input{
         width: 100%;
         display: block  ;
         padding: 1rem 1.2rem;
@@ -67,6 +67,8 @@
         resize: none;
     }
 
+    &__name-input:focus ~ &__name-label,
+    &__name-input:valid ~ &__name-label,
     &__email-input:focus ~ &__email-label,
     &__email-input:valid ~ &__email-label,
     &__email-input:not(:placeholder-shown) ~ &__email-label,

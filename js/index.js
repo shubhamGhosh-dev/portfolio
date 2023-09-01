@@ -44,8 +44,9 @@ var glide2 = new Glide(".glide2", options);
 
 glide.mount();
 glide2.mount();
-//////////////////////////////////////////////////////////////////////////
+////////////////////////////////////// For Message Sending ////////////////////////////////////
 
+const nameInput = document.getElementById("name_input");
 const emailInput = document.getElementById("email-input");
 const messageInput = document.getElementById("message-input");
 const messageForm = document.getElementById("message-form");
@@ -55,19 +56,30 @@ const msgSubmitBtn = document.getElementById("message-submit-btn");
 const sendIcon = document.getElementById("send-icon");
 const lodingIcon = document.getElementById("loading-icon");
 
+// const LOCAL_API_LINK = 'http://localhost:3000/api/send-message';
+const API_LINK = 'https://strange-clothes-lion.cyclic.app/api/send-message';
+
 messageForm.addEventListener("submit", async (e) => {
    e.preventDefault();
 
-   if((emailInput.value && validateEmailID(emailInput.value)) && messageInput.value){
+   if(
+      nameInput.value && 
+      (emailInput.value && validateEmailID(emailInput.value)) && 
+      messageInput.value
+      ){
       disableBtn();
-      sendMessage(emailInput.value, messageInput.value)
+      sendMessage(nameInput.value, emailInput.value, messageInput.value)
          .then(res => {
             if(res.success){
+               nameInput.value = "";
                emailInput.value = "";
                messageInput.value = "";
             }
             enableBtn()
-            showAlert(res.msg? res.msg : "Something went wrong.");
+            showAlert(res.message? res.message : "Something went wrong.");
+         }).catch(err => {
+            console.log(err);
+            showAlert("Something went wrong.");
          })
    }else{
       if(emailInput.value && !validateEmailID(emailInput.value)){
@@ -87,10 +99,11 @@ function showAlert(msg){
    }, 4500)
 }
 
-async function sendMessage(email, message){
+async function sendMessage(name, email, message){
    const body = {
-      email: email,
-      message: message
+      name,
+      email,
+      message,
    }
    const header = {
       'Content-Type': 'application/json'
@@ -98,7 +111,7 @@ async function sendMessage(email, message){
 
    const options = {method: 'POST', headers: header, body: JSON.stringify(body)};
 
-   const res = await fetch('https://oauth-messaging-server.herokuapp.com/sendmail', options).then(response => response.json())
+   const res = await fetch(API_LINK, options).then(response => response.json())
    return res;
 }
 
