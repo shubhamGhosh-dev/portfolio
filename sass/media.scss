@@ -26,7 +26,7 @@
    }
    .info,
    .social {
-      width: auto;
+      width: 100%;
    }
    .info {
       padding: 5rem 0rem 5rem 0rem;
@@ -159,5 +159,28 @@
 @media (max-width: 420px){
    .message-me__alart{
       bottom: -3.5rem;
+   }
+}
+
+
+@media (max-width: 400px){
+   .info {
+      &__phone,
+      &__email {
+         margin-left: 4rem;
+      }
+   }
+}
+
+@media (max-width: 360px){
+   .info{
+      flex-direction: column;
+      padding-left: 4rem;
+   }
+}
+
+@media (max-width: 330px){
+   .skill{
+      height: 82rem;
    }
 }

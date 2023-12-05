@@ -357,9 +357,9 @@ body {
   .message-me__form {
     width: 55rem;
     margin: auto 0; }
-  .message-me__email, .message-me__message {
+  .message-me__name, .message-me__email, .message-me__message {
     position: relative; }
-  .message-me__email-label, .message-me__message-label {
+  .message-me__name-label, .message-me__email-label, .message-me__message-label {
     position: absolute;
     color: gray;
     font-size: 1.3rem;
@@ -369,7 +369,7 @@ body {
     background-color: #001324;
     pointer-events: none;
     transition: all 0.2s; }
-  .message-me__email-input, .message-me__message-input {
+  .message-me__name-input, .message-me__email-input, .message-me__message-input {
     width: 100%;
     display: block;
     padding: 1rem 1.2rem;
@@ -380,11 +380,13 @@ body {
     border: 1px solid #00b9a5;
     border-radius: 0.5rem;
     color: #ffff; }
-    .message-me__email-input:focus, .message-me__message-input:focus {
+    .message-me__name-input:focus, .message-me__email-input:focus, .message-me__message-input:focus {
       outline: none; }
   .message-me__message-input {
     height: 10rem;
     resize: none; }
+  .message-me__name-input:focus ~ .message-me__name-label,
+  .message-me__name-input:valid ~ .message-me__name-label,
   .message-me__email-input:focus ~ .message-me__email-label,
   .message-me__email-input:valid ~ .message-me__email-label,
   .message-me__email-input:not(:placeholder-shown) ~ .message-me__email-label,
@@ -405,7 +407,9 @@ body {
     border-radius: 50%;
     z-index: 100;
     cursor: pointer;
-    transition: all 0.2s; }
+    transition: all 0.2s;
+    background-color: #0dd4b1;
+    border: none; }
   .message-me__submit:hover {
     transform: scale(1.1); }
   .message-me__submit:active {
@@ -508,7 +512,7 @@ body {
     padding: 0; }
   .info,
   .social {
-    width: auto; }
+    width: 100%; }
   .info {
     padding: 5rem 0rem 5rem 0rem;
     flex-direction: row;
@@ -598,3 +602,16 @@ body {
 @media (max-width: 420px) {
   .message-me__alart {
     bottom: -3.5rem; } }
+
+@media (max-width: 400px) {
+  .info__phone, .info__email {
+    margin-left: 4rem; } }
+
+@media (max-width: 360px) {
+  .info {
+    flex-direction: column;
+    padding-left: 4rem; } }
+
+@media (max-width: 330px) {
+  .skill {
+    height: 82rem; } }
