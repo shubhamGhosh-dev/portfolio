@@ -127,10 +127,15 @@
    border: none;
    border-radius: 50px;
    transition: all 0.2s;
+   svg{
+      fill: #ffffff;
+   }
 }
 
 .glide__arrows .glide__arrow:hover {
-   color: #ffdb56;
+   svg{
+      fill: #ffdb56;
+   }
 }
 
 .glide__bullets .glide__bullet {

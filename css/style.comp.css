@@ -129,6 +129,11 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.3rem; }
+  .intro-box-desg {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px; }
 
 .intro {
   display: flex;
@@ -252,9 +257,11 @@ body {
   border: none;
   border-radius: 50px;
   transition: all 0.2s; }
+  .glide__arrows .glide__arrow svg {
+    fill: #ffffff; }
 
-.glide__arrows .glide__arrow:hover {
-  color: #ffdb56; }
+.glide__arrows .glide__arrow:hover svg {
+  fill: #ffdb56; }
 
 .glide__bullets .glide__bullet {
   background-color: #c9bfff; }
@@ -465,20 +472,25 @@ body {
     text-decoration: none;
     font-size: 1.4rem;
     color: #a0a0a0; }
-  .info__phone > i, .info__email > i {
+  .info__phone > svg, .info__email > svg {
     position: absolute;
     left: -3.5rem;
-    top: 1rem; }
+    top: 1rem;
+    fill: white;
+    height: 23px; }
 
 .social {
   width: 50%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 30px; }
   .social a {
     color: white;
     margin: 2rem;
     transition: all .2s; }
+    .social a svg {
+      fill: #ffffff; }
   .social a:hover {
     transform: scale(1.2); }
 
@@ -614,4 +626,8 @@ body {
 
 @media (max-width: 330px) {
   .skill {
-    height: 82rem; } }
+    height: 82rem; }
+  .social a {
+    margin: 1.2rem; }
+    .social a svg {
+      height: 33px; } }

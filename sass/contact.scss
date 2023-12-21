@@ -191,10 +191,12 @@
         color: rgb(160, 160, 160);
     }
 
-    &__phone > i, &__email > i{
+    &__phone > svg, &__email > svg{
         position: absolute;
         left: -3.5rem;
         top: 1rem;
+        fill: white;
+        height: 23px;
     }
 }
 
@@ -203,11 +205,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
 
     & a{
         color: white;
         margin: 2rem;
         transition: all .2s;
+
+        svg{
+            fill: #ffffff;
+        }
     }
 
     & a:hover{
