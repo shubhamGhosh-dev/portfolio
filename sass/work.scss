@@ -102,6 +102,11 @@
          //background-image: linear-gradient(to right bottom, #ce9dfa, #925cfd);
          color: white;
          border-radius: 6px;
+
+         &-btn--disabled {
+            background-color: #ccc;
+            pointer-events: none;
+         }
       }
    }
 }

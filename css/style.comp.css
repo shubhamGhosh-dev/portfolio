@@ -238,6 +238,9 @@ body {
       background-color: #00b9a5;
       color: white;
       border-radius: 6px; }
+      .card__goto-btn-btn--disabled {
+        background-color: #ccc;
+        pointer-events: none; }
 
 .disabled {
   pointer-events: none;
